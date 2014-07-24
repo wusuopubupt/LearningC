@@ -13,7 +13,7 @@ int main() {
 }
 
 
-/* gdb */
+/* gcc -g pass_pointer_to_func.c -o test */
 
 /*
 dash@linux:~/cDev/memory$ gdb test
