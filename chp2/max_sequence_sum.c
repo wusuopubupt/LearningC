@@ -15,7 +15,7 @@ int max_subsequence_sum(const int*a, int n) {
     return max_sum;
 }
 
-int main() {
+int main1() {
     int a[5] = {2, 4, -2, 6, -3};
     int max = max_subsequence_sum(a, 5);
     printf("max: %d\n", max);
