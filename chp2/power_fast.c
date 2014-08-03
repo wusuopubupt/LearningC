@@ -1,6 +1,7 @@
 /**
  * Assume that both a and b are integer
  *
+ * @reference : http://blog.csdn.net/zhizichina/article/details/7573342
  */
 
 #include <stdio.h>
