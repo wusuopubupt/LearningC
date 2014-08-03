@@ -40,26 +40,26 @@ int find_major(const int *a, int n) {
 	return find_major(b, j);
 }
 
-int main() {
-	int a[9] = {3, 5, 2, 4, 2, 5, 2, 2, 2};
-
-	int i = 0;
-	int n = sizeof(a)/sizeof(a[0]);
-	int count = 0;
-
-	int find = find_major(a, n);
-	while(i < n) {
-		if(find == a[i]) {
-			count++;
-		}
-		i++;
-	}
-	if(count > n/2) {
-		printf("major element: %d\n", find);
-	}
-	else {
-		printf("no major element\n");
-	}
-
-	return 0;
-}
+//int main() {
+//	int a[9] = {3, 5, 2, 4, 2, 5, 2, 2, 2};
+//
+//	int i = 0;
+//	int n = sizeof(a)/sizeof(a[0]);
+//	int count = 0;
+//
+//	int find = find_major(a, n);
+//	while(i < n) {
+//		if(find == a[i]) {
+//			count++;
+//		}
+//		i++;
+//	}
+//	if(count > n/2) {
+//		printf("major element: %d\n", find);
+//	}
+//	else {
+//		printf("no major element\n");
+//	}
+//
+//	return 0;
+//}
