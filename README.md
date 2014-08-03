@@ -1,4 +1,4 @@
 LearningC
 =========
 
-My note of C
+My practice of C
