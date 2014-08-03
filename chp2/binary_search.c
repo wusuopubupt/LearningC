@@ -18,7 +18,13 @@ int binary_search_old(const int *a, int n, int x) {
 	return -1;
 }
 
-/* Each loop has only 1 compare*/
+/*
+ * Each loop has only 1 compare
+ *
+ * @refer :¡¡http://www.iteye.com/topic/1125181
+ *
+ * */
+
 int binary_search(const int *a, int n, int x) {
 	int low = 0, high = n, mid, found = -1;
 	while(low <= high) {
