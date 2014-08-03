@@ -20,10 +20,10 @@ int is_prime(int n) {
 	return is_prime;
 }
 
-int main() {
-	int n;
-	while(scanf("%d", &n) != EOF) {
-		printf("%d is prime: %s\n", n, is_prime(n) ? "true" : "false");
-	}
-	return 0;
-}
+//int main() {
+//	int n;
+//	while(scanf("%d", &n) != EOF) {
+//		printf("%d is prime: %s\n", n, is_prime(n) ? "true" : "false");
+//	}
+//	return 0;
+//}
