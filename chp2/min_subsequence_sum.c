@@ -21,10 +21,10 @@ int min_subsequence_sum(const int *a, int n) {
     return min_sum;
 }
 
-int main() {
-    int a[5] = {-1, 5, 2, 3, 4};
-    int min = min_subsequence_sum(a, 5);
-    printf("min:%d\n", min);
-
-    return 0;
-}
+//int main() {
+//    int a[5] = {-1, 5, 2, 3, 4};
+//    int min = min_subsequence_sum(a, 5);
+//    printf("min:%d\n", min);
+//
+//    return 0;
+//}
