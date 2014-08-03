@@ -37,10 +37,10 @@ int max_sequence_product(const int *a, int n) {
     return max_product;
 }
 
-//int main() {
-//    int a[6] = {-3, 4, 2, -5, -2, 4};
-//    int product = max_sequence_product(a, 6);
-//    printf("product: %d\n", product);
-//
-//    return 0;
-//}
+int main() {
+    int a[6] = {-3, 4, 2, -5, -2, 4};
+    int product = max_sequence_product(a, 6);
+    printf("product: %d\n", product);
+
+    return 0;
+}
