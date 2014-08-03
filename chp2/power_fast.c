@@ -35,17 +35,17 @@ double fast_pow(int a, int b) {
 	}
 }
 
-int main() {
-	int a = 2;
-	int b = 10;
-	double p = fast_pow(a, b);
-
-	if(p - (int)p == 0) {
-		printf("power of %d^%d: %d\n", a, b, (int)p);
-	}
-	else{
-		printf("power of %d^%d: %.2lf\n", a, b, p);
-	}
-
-	return 0;
-}
+//int main() {
+//	int a = 2;
+//	int b = 10;
+//	double p = fast_pow(a, b);
+//
+//	if(p - (int)p == 0) {
+//		printf("power of %d^%d: %d\n", a, b, (int)p);
+//	}
+//	else{
+//		printf("power of %d^%d: %.2lf\n", a, b, p);
+//	}
+//
+//	return 0;
+//}
