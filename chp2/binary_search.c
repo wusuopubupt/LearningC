@@ -42,10 +42,10 @@ int binary_search(const int *a, int n, int x) {
 	return (found != -1 && a[found] == x ? found : -1);
 }
 
-int main() {
-	int a[5] = {1, 2, 3, 4, 5};
-	int find = binary_search(a, 5, 3);
-	printf("find index is:%d\n", find);
-
-	return 0;
-}
+//int main() {
+//	int a[5] = {1, 2, 3, 4, 5};
+//	int find = binary_search(a, 5, 3);
+//	printf("find index is:%d\n", find);
+//
+//	return 0;
+//}

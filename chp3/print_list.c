@@ -15,7 +15,7 @@ void print_list(linklist *head) {
 	putchar('\n');
 }
 
-void free_list(linklist *head) {
+static void free_list(linklist *head) {
 	linklist *p = head;
 	if(p->next) {
 		free_list(p->next);
@@ -24,28 +24,28 @@ void free_list(linklist *head) {
 	p = NULL;
 }
 
-int main() {
-	linklist *root = (linklist*)malloc(sizeof(linklist));
-	root->data = 0;
-	root->next = NULL;
-	linklist *tail = root;
-
-	int i = 1, n = 10;
-	while(i <= n) {
-		linklist *p = (linklist*)malloc(sizeof(linklist));
-		p->data = i*i;
-		p->next = NULL;
-
-		tail->next = p;
-		tail = tail->next;
-
-		i++;
-	}
-
-	print_list(root->next);
-	free_list(root);
-	return 0;
-}
+//int main() {
+//	linklist *root = (linklist*)malloc(sizeof(linklist));
+//	root->data = 0;
+//	root->next = NULL;
+//	linklist *tail = root;
+//
+//	int i = 1, n = 10;
+//	while(i <= n) {
+//		linklist *p = (linklist*)malloc(sizeof(linklist));
+//		p->data = i*i;
+//		p->next = NULL;
+//
+//		tail->next = p;
+//		tail = tail->next;
+//
+//		i++;
+//	}
+//
+//	print_list(root->next);
+//	free_list(root);
+//	return 0;
+//}
 
 
 
