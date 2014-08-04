@@ -44,7 +44,6 @@ int main() {
 
 	print_list(root->next);
 	free_list(root);
-
 	return 0;
 }
 
