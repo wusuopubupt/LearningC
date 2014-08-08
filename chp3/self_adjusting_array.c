@@ -22,6 +22,7 @@ static int find_array(int *a, int n, int x) {
 
 	return found;
 }
+/*
 int main() {
 	int a[5] = {1, 4, 9, 16, 25};
 
@@ -36,3 +37,4 @@ int main() {
 
 	return 0;
 }
+*/
