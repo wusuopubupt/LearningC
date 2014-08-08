@@ -91,17 +91,17 @@ void printpolyn(polynomial p)
 	} //while
 } //printpolyn
 
-void main(void) {
-	int n, m;
-	polynomial pa, pb, pc;
-
-	printf("pa:");
-	scanf("%d", &n);
-	creatpolyn(pa, n);
-	printf("pb:");
-	scanf("%d", &m);
-	creatpolyn(pb, m);
-	pc = addpolyn(pa, pb);
-	printf("pa+pb=\n");
-	printpolyn(pc);
-}
+//void main(void) {
+//	int n, m;
+//	polynomial pa, pb, pc;
+//
+//	printf("pa:");
+//	scanf("%d", &n);
+//	creatpolyn(pa, n);
+//	printf("pb:");
+//	scanf("%d", &m);
+//	creatpolyn(pb, m);
+//	pc = addpolyn(pa, pb);
+//	printf("pa+pb=\n");
+//	printpolyn(pc);
+//}

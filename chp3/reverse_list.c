@@ -1,3 +1,5 @@
+/* @ref: http://blog.csdn.net/wusuopubupt/article/details/18318055 */
+
 #include<stdio.h>
 #include<stdlib.h>
 
