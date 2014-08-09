@@ -8,7 +8,6 @@ int josephus1(int n, int m) {
 	}
 }
 
-//#include <stdio.h>
 //int main() {
 //	int n, m, i, result;
 //	while (scanf("%d", &n) == 1) {
