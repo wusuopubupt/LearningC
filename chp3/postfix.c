@@ -3,6 +3,7 @@
  * @author : dash
  * @desc : reverse Polish calculator
  * @reference : K&R 4.3
+ * @usage : when you want to calculater (1 - 2) * (4 + 5), just input: 1 2 - 4 5 + *
  *
  */
 #include <stdio.h>
