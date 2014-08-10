@@ -1,3 +1,8 @@
+/*
+ * @author : dash
+ * @desc : the most fundamental operation for linked list
+ *
+ * */
 #include <stdio.h>
 #include <stdlib.h>
 
