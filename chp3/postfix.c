@@ -97,6 +97,7 @@ int getop(char s[]) {
 	return NUMBER; // c is number
 }
 
+/*
 int main() {
 	int type;
 	double op2;
@@ -143,7 +144,7 @@ int main() {
 	return 0;
 }
 
-
+*/
 
 
 
