@@ -21,6 +21,22 @@ static void in_quote(int c) {
 	}
 }
 
+void search(int c) {
+	int brace, brack, paren;
+	if(c == '{') {
+		++brace;
+	}
+	else if(c == '}') {
+		--brace;
+	}
+	else if(c == '[') {
+		++brack;
+	}
+	else if(c == ']') {
+		--brack;
+	}
+}
+
 int main() {
 	int c;
 
