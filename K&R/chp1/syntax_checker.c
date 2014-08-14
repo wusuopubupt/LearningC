@@ -35,6 +35,12 @@ void search(int c) {
 	else if(c == ']') {
 		--brack;
 	}
+	else if(c == '(') {
+		++paren;
+	}
+	else if(c == ')') {
+		--paren;
+	}
 }
 
 int main() {
