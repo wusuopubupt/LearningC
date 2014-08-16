@@ -12,7 +12,6 @@ int random(int min, int max) {
 	return (int)(my_rand() * (max-min) + min);
 }
 
-/*
 int main() {
 	int min = 5;
 	int max = 20;
@@ -35,4 +34,3 @@ int main() {
 
 	return 0;
 }
-*/
