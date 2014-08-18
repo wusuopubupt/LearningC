@@ -3,8 +3,8 @@
  
 void itob(unsigned x,char s[]);
 unsigned setbits(unsigned x,int p,int n,unsigned y);
-int main()
-{
+
+int main() {
     int x=0,p=0,n=0,i=0;
     unsigned int m=0;
     unsigned int y=0;
@@ -49,13 +49,11 @@ int main()
     return 0;
 }
 /* setbits函数: 返回对x做如下处理得到的值:x从第p位开始的n位被置为y的最右边n位的值，其余各位保持不变*/
-unsigned setbits(unsigned x,int p,int n,unsigned y)
-{
+unsigned setbits(unsigned x,int p,int n,unsigned y) {
     return (x & ~((~(~0 << n)) << p) | ((y<<p) & ((~(~0 << n)) << p)));
 }
 /* itob函数: 将无符号整数转化为二进制,将二进制位存放到数组,注意:要检查数组是否足够大 */
-void itob(unsigned x,char s[])
-{
+void itob(unsigned x,char s[]) {
     int i=0,n=0;
     char temp[MAXCHAR];
     
