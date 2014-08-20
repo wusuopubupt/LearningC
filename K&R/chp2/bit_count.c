@@ -7,9 +7,10 @@ int bit_count(int x) {
 	}
 	return count;
 }
-
+/*
 int main() {
 	int a = 10;
 	printf("bit count:%d\n", bit_count(a));
 	return 0;
 }
+*/
