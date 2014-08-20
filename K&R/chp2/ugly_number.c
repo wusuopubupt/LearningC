@@ -1,10 +1,11 @@
 #include<stdio.h>
  
-int min(int a, int b, int c) {
+static int min(int a, int b, int c) {
     int min = a < b ? a : b;
     return (min < c ? min : c);
 }
  
+/*
 int main() {
     int n;
  
@@ -29,7 +30,9 @@ int main() {
     }
     return 0;
 }
- 
+
+*/
+
 /**************************************************************
     Problem: 1214
     User: wusuopuBUPT
