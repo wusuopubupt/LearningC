@@ -22,12 +22,13 @@ void escape(char s[], char t[])
     }
     s[j] = EOF;
 }
- 
-int main(void)
-{
+
+/*
+int main(void) {
     char s[50];
     char t[20] = "just \t for a test\n\n !";
     escape(s, t);
     printf("%s\n", s);
     return 0;
 }
+*/
