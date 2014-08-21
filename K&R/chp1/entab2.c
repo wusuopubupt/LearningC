@@ -2,6 +2,7 @@
 
 #define TABNUM 8
 
+/*
 int main() {
 	int c, nb, nt;
 	nb = 0;
@@ -32,3 +33,4 @@ int main() {
 
 	return 0;
 }
+*/
