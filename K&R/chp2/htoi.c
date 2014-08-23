@@ -1,3 +1,10 @@
+/*
+ * Write the function htoi(s), which converts a string of hexadecimal
+ * digits (including an optional 0x or 0X) into its equivalent integer
+ * value. The allowable digits are 0 through 9, a through f, and A
+ * through F.
+ */
+
 #include <stdio.h>
 
 int htoi(char s[]) {
@@ -31,14 +38,14 @@ int htoi(char s[]) {
 }
 
 int main() {
-	//char *s = "oX10"; Error!
+	char *s = "0X10";
 	//char s[] = {'0', 'X', '1', '0'};
-	char s[1024];
+//	char s[1024];
 	int i, c;
-	for (i=0; (c = getchar()) != '\n'; i++) {
-		s[i] = c;
-	}
-	s[i] = '\0';
+//	for (i=0; (c = getchar()) != '\n'; i++) {
+//		s[i] = c;
+//	}
+//	s[i] = '\0';
 
 	printf("%d\n", htoi(s));
 
