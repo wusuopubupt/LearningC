@@ -1,7 +1,8 @@
-/*
+/**
+ * reference : http://en.wikipedia.org/wiki/Function_pointer
+ *
+ */
 
-
-*/
 #include <stdio.h>
 #include <stdlib.h>
 
