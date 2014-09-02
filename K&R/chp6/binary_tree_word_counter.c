@@ -1,3 +1,7 @@
+/*
+ * My practice of K&R 6.5
+ *
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,6 +9,7 @@
 
 #define MAXWORD 100
 
+/* a binary tree node */
 typedef struct tnode_ {
 	char *word;
 	int count;
@@ -28,8 +33,8 @@ char *copy_string(char *s) {
 tnode *add_tree(tnode *p, char *word) {
 	int result;
 	if(p == NULL) {
-		tnode *p = (tnode *)malloc(sizeof(tnode));
-		p->word= copy_string(word);
+		p = (tnode *)malloc(sizeof(tnode));
+		p->word= copy_string(word); // Attention !
 		p->count = 1;
 		p->left = NULL;
 		p->right = NULL;
@@ -53,7 +58,7 @@ tnode *add_tree(tnode *p, char *word) {
 void print_tree(tnode *p) {
 	if(p) {
 		print_tree(p->left);
-		printf("%s : %4d", p->word, p->count);
+		printf("%s\t : %4d\n", p->word, p->count);
 		print_tree(p->right);
 	}
 }
@@ -62,6 +67,7 @@ void free_node(tnode *p) {
 	if(p) {
 		free_node(p->left);
 		free_node(p->right);
+		free(p->word);
 		free(p);
 	}
 }
@@ -96,18 +102,18 @@ int getword(char *word, int n) {
 }
 
 int main() {
-	tnode *root;
+	tnode *root = NULL; // 指针一定要初始化为NULL
 	char word[MAXWORD];
 
 	while((getword(word, MAXWORD)) != EOF) {
 		if(isalnum(word[0])) {
-			add_tree(root, word);
+			root = add_tree(root, word);
 		}
 	}
 
 	print_tree(root);
 
-	//free_node(root);
+	free_node(root);
 
 	return 0;
 }
