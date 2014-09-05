@@ -31,28 +31,7 @@ key key_tab[] = {
 
 int getword(char *word, int n);
 int binary_search(key key_tab[], char *word, int n);
-
-int main() {
-	int i;
-	int n_keys = sizeof(key_tab) / sizeof(key_tab[0]);
-	char word[MAXWORD];
-
-	while(getword(word, MAXWORD) != EOF) {
-		if(isalpha(word[0])) {
-			if((i = binary_search(key_tab, word, n_keys)) >= 0) {
-				key_tab[i].count++;
-			}
-		}
-	}
-
-	i = 0;
-	while(i < n_keys) {
-		printf("%s : %d\n", key_tab[i].word, key_tab[i].count);
-		i++;
-	}
-
-	return 0;
-}
+key *binary_search2(key *key_tab, char *word, int n);
 
 int getword(char *word, int n) {
 	int c;
@@ -102,4 +81,71 @@ int binary_search(key key_tab[], char *word, int n) {
 		}
 	}
 	return -1;
+}
+
+/* implemented with pointer */
+key *binary_search2(key *key_tab, char *word, int n) {
+	key *low = key_tab;
+	key *high = key_tab + n-1;
+	key *mid;
+	int result;
+	while(low <= high) {
+		//mid = (low+high) / 2; /* error: can not use pointer+pointer d*/
+		mid = low + (high-low) / 2; /* pointer + num */
+		result = strcmp(word, mid->word);
+		if(result < 0) {
+			high = mid-1;
+		}
+		else if(result > 0) {
+			low = mid + 1;
+		}
+		else {
+			return mid;
+		}
+	}
+	return NULL;
+}
+
+int main1() {
+	int i;
+	int n_keys = sizeof(key_tab) / sizeof(key_tab[0]);
+	char word[MAXWORD];
+
+	while(getword(word, MAXWORD) != EOF) {
+		if(isalpha(word[0])) {
+			if((i = binary_search(key_tab, word, n_keys)) >= 0) {
+				key_tab[i].count++;
+			}
+		}
+	}
+
+	i = 0;
+	while(i < n_keys) {
+		printf("%s : %d\n", key_tab[i].word, key_tab[i].count);
+		i++;
+	}
+
+	return 0;
+}
+
+int main() {
+	int n_keys = sizeof(key_tab) / sizeof(key_tab[0]);
+	char word[MAXWORD];
+	key *k = NULL;
+
+	while(getword(word, MAXWORD) != EOF) {
+		if(isalpha(word[0])) {
+			if((k = binary_search2(key_tab, word, n_keys)) != NULL) {
+				k->count++;
+			}
+		}
+	}
+
+	int i = 0;
+	while(i < n_keys) {
+		printf("%s : %d\n", key_tab[i].word, key_tab[i].count);
+		i++;
+	}
+
+	return 0;
 }
