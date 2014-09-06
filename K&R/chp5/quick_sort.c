@@ -1,3 +1,7 @@
+/*
+ * my blog which discussed quick sort:  http://blog.csdn.net/wusuopubupt/article/details/39347709
+ *
+ */
 #include <stdio.h>
 
 /* declare function pointer */
