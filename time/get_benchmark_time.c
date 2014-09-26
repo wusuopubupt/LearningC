@@ -7,11 +7,18 @@
 #include <sys/time.h>
 #include <sys/resource.h>
 
+double get_millisecond() {
+	struct timeval t;
+	struct timezone tzp;
+	gettimeofday(&t, &tzp);
+	return t.tv_sec*1000 + t.tv_usec/1000; // return millisecond
+}
+
 double get_time() {
 	struct timeval t;
 	struct timezone tzp;
 	gettimeofday(&t, &tzp);
-	return t.tv_sec + t.tv_usec * 1e-6; // return second+millsecond
+	return t.tv_sec + t.tv_usec * 1e-6; // return second + microsecond/1000000
 }
 
 int main() {
