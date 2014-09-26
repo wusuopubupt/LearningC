@@ -14,7 +14,7 @@ double get_millisecond() {
 	return t.tv_sec*1000 + t.tv_usec/1000; // return millisecond
 }
 
-double get_time() {
+double get_second() {
 	struct timeval t;
 	struct timezone tzp;
 	gettimeofday(&t, &tzp);
@@ -22,9 +22,9 @@ double get_time() {
 }
 
 int main() {
-	double start_time = get_time();
+	double start_time = get_second();
 	increase_num();
-	double end_time = get_time();
+	double end_time = get_second();
 	printf("%f, start: %f, end:%f\n", end_time - start_time, start_time, end_time);
 
 	return 0;
