@@ -2,6 +2,7 @@
  * @author : wusuopubupt
  * @desc   : test of c pthread lib
  * @date:  : 2014-09-26
+ * @refer  : http://www.lix.polytechnique.fr/~liberti/public/computing/parallel/threads/threads-tutorial/tutorial.html
  */
 #include <stdio.h>
 #include <stdlib.h>
