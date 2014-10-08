@@ -1,6 +1,11 @@
+/*
+ * Reference : https://github.com/madeye/shadowsocks-libev/blob/master/src/utils.h
+ */
 #include <stdio.h>
 #include <time.h>
 #include <syslog.h>
+#include <string.h>
+#include <errno.h>
 
 #define use_syslog 0
 #define TIME_FORMAT "%Y-%m-%d %H:%I:%S"
@@ -16,8 +21,14 @@
     }}\
 while(0)
 
+void ERROR(const char *s)
+{
+    char *msg = strerror(errno);
+    LOG("%s: %s", s, msg);
+}
+
 int main() {
-	LOG("undefined param time!");
+	LOG("undefined param %s", "sss");
 
 	return 0;
 }
