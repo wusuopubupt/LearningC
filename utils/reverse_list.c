@@ -43,6 +43,18 @@ void reverse_list(node *head) {
 	}
 }
 
+node *reverse_list_recursion(node *head) {
+	if(head == NULL || head->next == NULL) {
+		return head;
+	}
+	else{
+		node *new_head = reverse_list_recursion(head->next);
+		head->next->next = head;
+		head->next = NULL;
+		return new_head;
+	}
+}
+
 int main() {
 	node *head = (node *)malloc(sizeof(node));
 	head->data = 0;
@@ -61,9 +73,9 @@ int main() {
 		i++;
 	}
 
-	//print_list(head);
-	reverse_list(head);
-	//print_list(head);
+	print_list(head);
+	node *new_head = reverse_list_recursion(head);
+	print_list(new_head);
 
 	free_list(head);
 	return 0;
